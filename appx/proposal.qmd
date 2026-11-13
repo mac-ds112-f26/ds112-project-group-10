@@ -1,5 +1,30 @@
 ---
 title: "Proposal"
 ---
+Title: How Does a Person's Athletic Activity Affect Their Expected Lifespan?
 
-Your proposal go here.
+Team Members: Owen, Rubin, Connor
+
+Our Project is investigating the correlation between Athletic Activity and Lifespan, and how a person's level and type of athletic activity affect their lifespan. 
+
+Research Questions:
+How does the amount of athletic activity a person participates in affect their lifespan?
+Which athletic activity has the greatest impact on life expectancy?
+How does this athletic activity compare with other similar activities?
+
+The inspiration behind this project is that we are all athletes in different capacities, and we are all curious as to which specific activity we should focus our attention on. If we can find this activity, we will find the benefit of pursuing it as a hobby as we age. 
+
+Potential Dataset: National Health Interview Survey (NHIS)
+
+Communication:
+Primary method: Gmail
+Expected response time: within 24 hours
+Meeting times: We will communicate each week to determine the best time that week for all of us to meet (and will work together during the project work days)
+
+Roles:
+Point of Contact: Connor
+Technical Lead: Owen
+Style Lead: Rubin
+
+Conflict Resolution: We will hold ourselves accountable for meeting deadlines and set clear expectations for when things need to be completed. 
+
