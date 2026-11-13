@@ -1,5 +1,19 @@
 ---
-title: "Case Study"
+title: "Group 10 Case Study"
+subtitle: "Owen, Rubin, Connor"
 ---
 
-Your case study go here.
+# Case Study: "The Differences in How Fox, CNN, MSNBC & Fox Cover the News" By Charlie Smart
+
+**Source:** *Smart, C. (2016). The differences in how CNN, MSNBC, and FOX cover the news. The Pudding. https://pudding.cool/2018/01/chyrons/*
+
+## Data Story Structure
+\
+
+-  The introduction bases the story in something real-life and relatable: how Americans get their news, and how Cable TV channels shape people's news diets. Then, it segues into a research question (what news are we getting from TV, and how does that change depending on the channel?) and a brief overview of methodology.
+
+- The bulk of the article is built around three main visualizations: a triangluar dot plot, a series of multivariate line plots, and a series of weighted bar plots. Each one is revealed sequentially, in order to analyze information or nuance that the previous visualization couldn't capture. The first one tells us what terms/topics each channel emphasizes relative to the others, the second shows us the difference in staying power various topics had across channels, and the third one tells us about the context in which each channel covered various topics. Taken together, the visualizations tell a cohesive story about the many differences in news coverage across the three channels.
+
+-  The visualizations are animated based on what is being described in the text, with the user's scrolling revealing both more paragraphs and more information on each visualization. This helps the reader directly link the information in the text with the information in the graphics. It also avoids overwhelming the reader with too much graphical information at once. Each visualization is also interactive, allowing a curious reader to dig deeper into the data.
+
+-  In the conclusion, the story highlights the overarching takeaway from the three visualizations, which is that people who watch different cable news channels get very different pictures of key issues.
