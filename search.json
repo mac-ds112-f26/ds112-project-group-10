@@ -1,0 +1,111 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "How Athletic Activity Affects Life Expectancy",
+    "section": "",
+    "text": "Your report goes here.\n\nCode# a test code chunk",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Report</span>"
+    ]
+  },
+  {
+    "objectID": "eda/eda-member1.html",
+    "href": "eda/eda-member1.html",
+    "title": "Member 1 First Name & Last Name Initial",
+    "section": "",
+    "text": "Your exploratory data analysis of the team datasets go here.",
+    "crumbs": [
+      "EDA",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Member 1 First Name & Last Name Initial</span>"
+    ]
+  },
+  {
+    "objectID": "eda/eda-member2.html",
+    "href": "eda/eda-member2.html",
+    "title": "Member 2 First Name & Last Name Initial",
+    "section": "",
+    "text": "Your exploratory data analysis of the team datasets go here.",
+    "crumbs": [
+      "EDA",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Member 2 First Name & Last Name Initial</span>"
+    ]
+  },
+  {
+    "objectID": "eda/eda-member3.html",
+    "href": "eda/eda-member3.html",
+    "title": "Member 3 First Name & Last Name Initial",
+    "section": "",
+    "text": "Your exploratory data analysis of the team datasets go here.",
+    "crumbs": [
+      "EDA",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Member 3 First Name & Last Name Initial</span>"
+    ]
+  },
+  {
+    "objectID": "appx/proposal.html",
+    "href": "appx/proposal.html",
+    "title": "Appendix A — Proposal",
+    "section": "",
+    "text": "Title: How Does a Person’s Athletic Activity Affect Their Expected Lifespan?\nTeam Members: Owen, Rubin, Connor\nOur Project is investigating the correlation between Athletic Activity and Lifespan, and how a person’s level and type of athletic activity affect their lifespan.\nResearch Questions: How does the amount of athletic activity a person participates in affect their lifespan? Which athletic activity has the greatest impact on life expectancy? How does this athletic activity compare with other similar activities?\nThe inspiration behind this project is that we are all athletes in different capacities, and we are all curious as to which specific activity we should focus our attention on. If we can find this activity, we will find the benefit of pursuing it as a hobby as we age.\nPotential Dataset: National Health Interview Survey (NHIS)\nCommunication: Primary method: Gmail Expected response time: within 24 hours Meeting times: We will communicate each week to determine the best time that week for all of us to meet (and will work together during the project work days)\nRoles: Point of Contact: Connor Technical Lead: Owen Style Lead: Rubin\nConflict Resolution: We will hold ourselves accountable for meeting deadlines and set clear expectations for when things need to be completed.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "appx/case-study.html",
+    "href": "appx/case-study.html",
+    "title": "Appendix B — Group 10 Case Study",
+    "section": "",
+    "text": "Case Study: “The Differences in How Fox, CNN, MSNBC & Fox Cover the News” By Charlie Smart\nSource: Smart, C. (2016). The differences in how CNN, MSNBC, and FOX cover the news. The Pudding. https://pudding.cool/2018/01/chyrons/",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Group 10 Case Study</span>"
+    ]
+  },
+  {
+    "objectID": "appx/case-study.html#data-story-structure",
+    "href": "appx/case-study.html#data-story-structure",
+    "title": "Appendix B — Group 10 Case Study",
+    "section": "Data Story Structure",
+    "text": "Data Story Structure\n\n\n\nThe introduction bases the story in something real-life and relatable: how Americans get their news, and how Cable TV channels shape people’s news diets. Then, it segues into a research question (what news are we getting from TV, and how does that change depending on the channel?) and a brief overview of methodology.\nThe bulk of the article is built around three main visualizations: a triangluar dot plot, a series of multivariate line plots, and a series of weighted bar plots. Each one is revealed sequentially, in order to analyze information or nuance that the previous visualization couldn’t capture. The first one tells us what terms/topics each channel emphasizes relative to the others, the second shows us the difference in staying power various topics had across channels, and the third one tells us about the context in which each channel covered various topics. Taken together, the visualizations tell a cohesive story about the many differences in news coverage across the three channels.\nThe visualizations are animated based on what is being described in the text, with the user’s scrolling revealing both more paragraphs and more information on each visualization. This helps the reader directly link the information in the text with the information in the graphics. It also avoids overwhelming the reader with too much graphical information at once. Each visualization is also interactive, allowing a curious reader to dig deeper into the data.\nIn the conclusion, the story highlights the overarching takeaway from the three visualizations, which is that people who watch different cable news channels get very different pictures of key issues.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Group 10 Case Study</span>"
+    ]
+  },
+  {
+    "objectID": "wa/wa-member1.html",
+    "href": "wa/wa-member1.html",
+    "title": "Appendix C — Member 1 First Name & Last Name Initial",
+    "section": "",
+    "text": "Work area to try code",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Member 1 First Name & Last Name Initial</span>"
+    ]
+  },
+  {
+    "objectID": "wa/wa-member2.html",
+    "href": "wa/wa-member2.html",
+    "title": "Appendix D — Member 2 First Name & Last Name Initial",
+    "section": "",
+    "text": "Work area to try code",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Member 2 First Name & Last Name Initial</span>"
+    ]
+  },
+  {
+    "objectID": "wa/wa-member3.html",
+    "href": "wa/wa-member3.html",
+    "title": "Appendix E — Member 3 First Name & Last Name Initial",
+    "section": "",
+    "text": "Work area to try code",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Member 3 First Name & Last Name Initial</span>"
+    ]
+  }
+]
