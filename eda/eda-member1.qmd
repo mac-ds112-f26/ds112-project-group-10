@@ -1,5 +1,113 @@
 ---
-title: "Member 1 First Name & Last Name Initial"
+title: "Owen L. EDA"
+subtitle: "Data Source: 2025 County Heath Rankings, University of Wisconsin Population Health Institute" 
 ---
 
-Your exploratory data analysis of the team datasets go here.
+```{r}
+#Loading two datasets into the environment
+library(tidyverse)
+
+chrd_2025_select <- read.csv("chrd_2025_select_measures.csv")
+
+chrd_2025_additional <- read.csv("chrd_2025_additional_measures.csv")
+```
+## Exploring Key Variables
+
+```{r}
+#Exploring distributions of values for key variables
+
+chrd_2025_additional |>
+  filter(!is.na(County), County != "") |>
+  ggplot(aes(x = Life.Expectancy)) +
+  geom_density(fill = "pink", alpha = 0.7) +
+  labs(x = "County Life Expectancy")
+
+chrd_2025_additional |>
+   filter(!is.na(County), County != "") |>
+  summarize(
+    min_life_exp  = min(Life.Expectancy, na.rm = TRUE),
+    mean_life_exp = mean(Life.Expectancy, na.rm = TRUE),
+    max_life_exp  = max(Life.Expectancy, na.rm = TRUE)
+  )
+
+chrd_2025_additional |>
+  filter(!is.na(County), County != "") |>
+  ggplot(aes(x = Physical.Inactivity.....Physically.Inactive)) +
+  geom_density(fill = "red3", alpha = 0.7) +
+  labs(x = "% of County Pop. Physically Inactive")
+
+chrd_2025_additional |>
+   filter(!is.na(County), County != "") |>
+  summarize(
+    min_phy_inactive  = min(Physical.Inactivity.....Physically.Inactive, na.rm = TRUE),
+    mean_phy_inactive = mean(Physical.Inactivity.....Physically.Inactive, na.rm = TRUE),
+    max_phy_inactive  = max(Physical.Inactivity.....Physically.Inactive, na.rm = TRUE)
+  )
+
+chrd_2025_select |>
+  filter(!is.na(County), County != "") |>
+  ggplot(aes(x = Access.to.Exercise.Opportunities.....With.Access.to.Exercise.Opportunities)) +
+  geom_density(fill = "green4", alpha = 0.7) +
+  labs(x = "% of County Pop. with Access to Exercise Opportunities")
+
+chrd_2025_select |>
+   filter(!is.na(County), County != "") |>
+  summarize(
+    min_excercise_access  = min(Access.to.Exercise.Opportunities.....With.Access.to.Exercise.Opportunities, na.rm = TRUE),
+    mean_excercise_access= mean(Access.to.Exercise.Opportunities.....With.Access.to.Exercise.Opportunities, na.rm = TRUE),
+    max_exercise_access = max(Access.to.Exercise.Opportunities.....With.Access.to.Exercise.Opportunities, na.rm = TRUE)
+  )
+```
+# Analysis
+
+-  County Life Expectancy has a fairly normal distribution, while % physically inactive is very slightly right-skewed and % with access to exercise is somewhat left-skewed. The follow-up to these univariate visualizations is to explore the relationships between life expectancy and the latter two variables.
+\
+
+## Cleaning and Joining Datasets
+
+```{r}
+#Cleaning and Joining Datasets 
+chrd_2025_additional_small <- chrd_2025_additional |>
+  select(FIPS, State, County, Life.Expectancy, Life.Expectancy...95..CI...High, Life.Expectancy...95..CI...Low, Physical.Inactivity.....Physically.Inactive, Physical.Inactivity...95..CI...High, Physical.Inactivity...95..CI...Low)
+
+chrd_2025_select_small <- chrd_2025_select |>
+  select(FIPS, State, County, Access.to.Exercise.Opportunities.....With.Access.to.Exercise.Opportunities, Access.to.Exercise.Opportunities.....With.Access.to.Exercise.Opportunities, Premature.Death...Years.of.Potential.Life.Lost.Rate, Premature.Death...95..CI...High, Premature.Death...95..CI...Low)
+
+joined_chrd_2025_small <- chrd_2025_additional_small |>
+  full_join(chrd_2025_select_small)
+```
+\
+
+## Question: How does a county's life expectancy relate to its percentage of physically inactive individuals?
+
+```{r}
+#Question: How does a county's life expectancy relate to its percentage of physically inactive individuals?
+
+joined_chrd_2025_small |>
+  filter(!is.na(County)) |>
+  ggplot(aes(x = Physical.Inactivity.....Physically.Inactive, y = Life.Expectancy)) +
+  geom_point(color = "red3", alpha = 0.2) +
+  labs(x = "Est. % of County Pop. Physically Inactive", y = "Est. County Life Expectancy") +
+  geom_smooth(method = "lm")
+
+```
+# Analysis
+
+-  There is a very strong negative relationship between the life expectancy in a county and the percentage of people in that county who are physically inactive. I don't really find anything surprising in this graph. However, while the graph answers the research question, it cannot tell us anything about causation in this relationship, or about what other confounding variables might be at play. It also doesn't tell us anything about whether increased opportunities for exercise positively relate to life expectancy. A natural follow-up is to explore the relationship between life expectancy and access to exercise.
+\
+## Question 2: How does a County's life expectancy relate to the percentage of its population with access to exercise opportunities?
+
+```{r}
+#Question: How does a County's life expectancy relate to the percentage of its population with access to exercise opportunities?
+
+joined_chrd_2025_small |>
+  filter(!is.na(County)) |>
+  ggplot(aes(x = Access.to.Exercise.Opportunities.....With.Access.to.Exercise.Opportunities, y = Life.Expectancy)) +
+  geom_point(color = "green4",alpha = 0.2) +
+  labs(x = "Est. % of County Pop. With Access to Exercise Opportunities", y = "Est. County Life Expectancy") +
+  geom_smooth(method = "lm")
+```
+# Analysis
+
+-  There is a clear, strong positive relationship between county life expectancy and access to exercise opportunities, although not quite as strong as the negative relationship in the prior graph. There are some interesting outliers in here, but otherwise nothing surprising. Once again, the original question is answered, but causation and the impact of other factors (which may both drive up life expectancy and be associated with increased access to exercise opportunities) are not determined. More follow-up charts might explore the relationship between our independent variables and other health outcomes which are similar or related to life expectancy. 
+
